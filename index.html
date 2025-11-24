@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankur Portfolio</title>
+
+<style>
+/* ---------------- GLOBAL RESET ---------------- */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins, sans-serif;}
+
+body{
+  overflow-x:hidden;
+  color:white;
+}
+
+/* ---------------- VIDEO BACKGROUND ---------------- */
+.video-bg{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  z-index:-1;
+}
+
+/* ---------------- GLASS EFFECT ---------------- */
+.glass{
+  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  box-shadow:0 8px 32px rgba(0,0,0,0.3);
+  border-radius:40px;
+}
+
+/* ---------------- NAVIGATION ---------------- */
+nav{
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  padding:18px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  z-index:10;
+}
+
+nav a{
+  padding:10px 22px;
+  text-decoration:none;
+  color:white;
+  font-weight:600;
+  font-size:17px;
+  transition:0.3s;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+nav a:hover{
+  background:rgba(255,255,255,0.18);
+  transform:translateY(-3px);
+}
+
+/* ---------------- SECTIONS ---------------- */
+section{
+  padding:100px 20px;
+  text-align:center;
+  min-height:100vh;
+}
+
+/* ---------------- HERO ---------------- */
+.hero h1{
+  font-size:60px;
+  font-weight:800;
+  margin-bottom:10px;
+  text-shadow:0 4px 20px rgba(0,0,0,0.6);
+}
+
+.hero p{
+  font-size:22px;
+  opacity:0.9;
+}
+
+/* ---------------- PROJECT CARDS ---------------- */
+.project-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.project-card{
+  padding:25px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(15px);
+  transition:0.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-8px);
+  background:rgba(255,255,255,0.25);
+}
+
+/* ---------------- CONTACT ---------------- */
+.contact-icons{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-top:30px;
+}
+
+.icon{
+  width:60px;
+  height:60px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  font-size:28px;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.3);
+}
+
+.icon:hover{
+  transform:scale(1.15);
+  background:rgba(255,255,255,0.3);
+}
+
+/* SMOOTH SCROLL */
+html{
+  scroll-behavior:smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop class="video-bg">
+  <source src="sg.mp4" type="video/mp4">
+</video>
+
+<!-- NAVIGATION BAR -->
+<nav class="glass">
+  <a href="#home">🏠 Home</a>
+  <a href="#projects">📁 Projects</a>
+  <a href="#about">👤 About</a>
+  <a href="#skills">⭐ Skills</a>
+  <a href="#testimonials">💬 Testimonials</a>
+  <a href="#contact">📞 Contact</a>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+  <h1>Ankur – Graphic Designer</h1>
+  <p>I create modern, creative and eye-catching designs.</p>
+</section>
+
+<!-- PROJECT SECTION -->
+<section id="projects">
+  <h1>My Projects</h1>
+  <div class="project-container">
+    <div class="project-card glass">Project 1</div>
+    <div class="project-card glass">Project 2</div>
+    <div class="project-card glass">Project 3</div>
+    <div class="project-card glass">Project 4</div>
+    <div class="project-card glass">Project 5</div>
+    <div class="project-card glass">Project 6</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h1>About Me</h1>
+  <p>I am a dedicated graphic designer specializing in typography, posters, thumbnails, and mockups.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h1>Skills</h1>
+  <p>Adobe Photoshop • Adobe Illustrator • Graphic Design</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <h1>Testimonials</h1>
+  <p>Client reviews coming soon...</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h1>Contact Me</h1>
+  <div class="contact-icons">
+    <a href="#" class="icon glass">📱</a>
+    <a href="#" class="icon glass">📸</a>
+    <a href="#" class="icon glass">▶️</a>
+    <a href="#" class="icon glass">✉️</a>
+  </div>
+</section>
+
+</body>
+</html>
